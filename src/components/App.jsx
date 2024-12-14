@@ -1,3 +1,11 @@
+import Notiflix from 'notiflix';
+import AddNumberForm from './AddNumberForm';
+import Contacts from './Contacts';
+import Filter from './Filter';
+Notiflix.Notify.init({
+  clickToClose: true,
+  cssAnimationStyle: 'zoom',
+});
 export const App = () => {
   return (
     <div
@@ -7,10 +15,13 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+        flexDirection: 'column',
       }}
     >
-      React homework template
+      <AddNumberForm />
+      <Filter />
+      <Contacts />
     </div>
   );
 };
